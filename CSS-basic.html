@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> css basic </title>
+        <link rel="stylesheet" type="text/css" href="basict.css">
+			
+    </head>
+<body>
+      <div class="form" style="overflow: hidden;">
+          <form action="" style="position: absolute; z-index: 1; ">
+              <label for="name">NAME</label>
+              <input type="text" name="name" style="width: 200px;margin-top: 10px;" id ="name" value="">
+              
+              <label for="age" style="margin-left: 150px;">AGE</label>
+              <input type="number" name="age" id ="age" value="">
+              <br>
+              <label for="country">COUNTRY</label>
+              <select name="country" style="margin-top: 20PX;" id ="country" value="">
+                  <option >US</option>
+                  <option selected >INDIA</option>
+                  <option>UK</option>
+              </select>
+
+              <label for="state" style="margin-left:50PX;">STATE</label>
+              <select name="state" id ="state" value="" >
+                  <option >TN</option>
+                  <option >AP</option>
+                  <option selected>UP</option>
+              </select>
+
+              <label for="city" style="margin-left:50PX;">CITY</label>
+              <select name="city" id ="city">
+                <option value="chennai">CHENNAI</option>
+                <option value="cbe">COIMBATORE</option>
+              </select>
+              <br>
+
+              <p class="gender" style="margin-top: 20PX;" id ="gender" value="">GENDER</p>
+              <!-- <label for="gender" class="gender" style="margin-top: 20PX;">GENDER</label> -->
+              <input type="radio" name="gender" style="margin-top: 0PX; margin-left: 60px;" value="male" class="gender1"> MALE <br>
+              <input type="radio" name="gender"  style="margin-top: 0PX; margin-left: 60px;" value="female" class="gender2"> FEMALE
+             
+              <p class="marr status" style="margin-top: -71PX; margin-left: 242px;" id ="marr" value="">MARR STATUS</p>
+              <!-- <label for="marr status" style="margin-left:30px;" class="ms">MARR STATUS</label> -->
+              <input type="radio" name="marr status" style="margin-top: 0PX;margin-left: 300px;" class="ms"> MARRIED. <br>
+              <input type="radio" name="marr status" style="margin-top: 0PX;margin-left: 300px;"class="ms"> HAPPY,
+              <br>
+              <label for="skills" style="margin-top: 20PX;" id ="skills" value="">SKILLS</label>
+              <input type="checkbox" name="skills" style="margin-top: 20PX;"> PYTHON
+              <input type="checkbox" name="skills"> JS
+              <input type="checkbox" name="skills"> HTML
+              <input type="checkbox" name="skills"> CSS
+              <br>
+              <P style="margin-top: 20PX;">ABOUT YOU</P>
+              <textarea name="about you" cols="30" rows="10" style="margin-top: 0PX;" placeholder="ABOUT YOU"> </textarea>
+              <br>
+              <input type="submit" placeholder="submit here" style="margin-top: 20PX; background-color:white;" onclick="foo();return false">
+          </form>
+          <img src="image-office.jpeg" alt="" style="opacity: 0.5;">
+      </div>
+
+      <div class="table" style="overflow: hidden;">
+             <table style="position: absolute;  z-index: 1;">
+                    <thead>
+                            <tr>
+                                <th>NAME</th>
+                                <th>COUNTRY</th>
+                                <th>STATE</th>
+                                <th>CITY</th>
+                                <th>GENDER</th>
+                                <th>MARR STATUS</th>
+                                <th>SKILLS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb21">
+                            
+                            
+							
+                        </tbody>
+             </table>
+             <img src="hacker.jpg" alt="" style="opacity: 0.5;">
+      </div>
+	  
+	  <script>
+			function foo(){
+				var x = document.getElementById("name").value;
+				var y = document.getElementById("country").value;
+				var x2 = document.getElementById("state").value;
+				var y2 = document.getElementById("city").value;
+				var x3 = document.querySelector('input[name=gender]:checked').value;
+				var y3 = document.getElementById("marr").value;
+				var x4 = document.getElementById("skills").value;
+				
+				var tro = document.createElement("tr");
+				
+				
+				
+				
+				
+				/*tro.innerHTML = "<td>"+x+"</td><td>"+y+"</td><td>"+x2+"</td><td>"+y2+"</td><td>"+x3+"</td><td>"+y3+"</td><td>"+x4+"</td>";
+				
+				
+				document.getElementById("tb21").appendChild(tro);
+				
+			} */
+			
+			var data = []
+			data.push(
+			{ Name:x,
+			  Country:y,
+			  State:x2,
+			  City:y2,
+			  Gender:x3,
+			  MARRStatus:y3,
+			  Skills:x4,
+			  })
+			  
+			  var tab = document.getElementById("tb21")
+			  
+			  data.forEach((value)=>{
+			  var tro = document.createElement("tr");
+			  
+			  var td1 = document.createElement("td");
+			  var td2 = document.createElement("td");
+ 			  var td3 = document.createElement("td");
+			  var td4 = document.createElement("td"); 
+			  var td5 = document.createElement("td");
+			  var td6 = document.createElement("td");
+			  var td7 = document.createElement("td");
+			  
+			  
+			  td1.innerHTML = value.Name;
+			  td2.innerHTML = value.Country;
+			  td3.innerHTML = value.State;
+			  td4.innerHTML = value.City;
+			  td5.innerHTML = value.Gender;
+			  td6.innerHTML = value.MARRStatus;
+			  td7.innerHTML = value.Skills; 
+			  
+			  tro.appendChild(td1);
+			  tro.appendChild(td2);
+			  tro.appendChild(td3);
+			  tro.appendChild(td4);
+			  tro.appendChild(td5);
+			  tro.appendChild(td6);
+			  tro.appendChild(td7);
+			  
+			  tab.appendChild(tro);
+			  
+			  
+			 }) 
+			 console.log(data.City)
+			 }
+			</script>
+				
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- !important<br>
+        margin-space bwt two boxs<br>
+        padding-space bwt content and box<br>
+        float<br>
+        <h1 style="width:40%;float:left;margin: 10px;">linking</h1>
+        <p style="color:green;width:50%;float:top"> run barry run</p>
+        <h2 class="v01 v02">
+            one
+        </h2> -->

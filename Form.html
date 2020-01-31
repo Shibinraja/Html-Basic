@@ -1,0 +1,111 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Form</title>
+	<style>
+	
+	.splitleft{
+	float:left;
+	}
+	
+	.age{
+	float:right;
+	padding-left:30px;
+	margin-top:-20px;
+	}
+	
+	.country{
+	float:left;
+	position:absolute;
+	margin-left:-177px;
+	}
+	
+	.state{
+	float:left;
+	position:absolute;
+	margin-left:-177px;
+	}
+	
+	
+	</style>
+	
+	
+	</head>
+	
+	<body><h1> Form Making </h1>
+	
+	<form>
+	
+		<div class="splitleft">
+	
+			<div class="name">
+				<label for=""> Name:</label><br>
+					<input type="text" placeholder="Enter your Name">
+				<div class="age">
+					<label for=""> Age:</label><br>
+						<input type="number" placeholder="Enter your Age">
+			
+			<br>
+			<br>
+			
+			<div class="country">
+				<label for=""> Country: </label><br>
+					<input list="Country">
+						<datalist id="Country">
+							<option value="Albania">
+							<option value="Kyrgyzstan">
+							<option value="Newzealand">
+							<option value="Canada">
+							<option value="Ireland">
+						</datalist>
+			</div>			
+				
+				<div class="state">
+					<label for=""> State: </label>
+						<input list="State">
+							<datalist id="State">
+								<option value="Auckland">
+								<option value="Bengal">
+								<option value="Ottawa">
+								<option value="Borrusia">
+								<option value="Arizona">
+				
+							</datalist>
+				</div>
+				
+				<label for=""> City: </label>
+					<input list="City">
+						<datalist id="City">
+							<option value="Novascotia">
+							<option value="Gotham">
+							<option value="Metropolis">
+							<option value="usalampatti">
+							<option value="ThalavattiAmbatti">
+						</datalist>
+				
+			<br>
+			<br>
+			
+			<div>	<label for="">Gender:</label>
+				<br>
+				<input type="radio" name="gender" value="male" checked>Male
+				<input type="radio" name="gender" value="female">Female
+				<input type="radio" name="gender" value="other">Other	
+			</div>
+		
+			<label for="">Marital Status:</label>
+				<input type="radio" name="marriage" value="married" checked>Married
+				<input type="radio" name="marriage" value="un-married">Un-Married
+				<input type="radio" name="marriage" value="Single">Single	
+	
+		
+	</form>
+		
+			 
+ 			
+	</div>
+	
+	</body>
+
+</html>
+	

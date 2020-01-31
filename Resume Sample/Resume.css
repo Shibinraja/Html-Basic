@@ -1,0 +1,28 @@
+.image{
+height:81px;
+width:90px;
+}
+
+.test{
+text-align:center;
+font-size:25px;
+}
+
+.left{
+text-align:left;
+}
+
+.right{
+text-align:right;
+}
+
+.vdivide{
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+
